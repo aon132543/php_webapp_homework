@@ -13,24 +13,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
 <div class="container">
-    <h2> HELLOWORLD2 </h2>
 <?php
-    
-$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$cleardb_server = $cleardb_url["host"];
-$cleardb_username = $cleardb_url["user"];
-$cleardb_password = $cleardb_url["pass"];
-$cleardb_db = substr($cleardb_url["path"],1);
-$active_group = 'default';
-$query_builder = TRUE;
-// Connect to DB
-$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+$servername="localhost";
+$username = "root";
+$password = "";
+$dbname = "shop";
 $per_page = 10;
-    
 $start_page =0;
-    
 
-
+$conn = mysqli_connect($servername,$username,$password,$dbname);
 
 if(isset($_GET["page"])) $start_page=$_GET["page"]*$per_page;
 
