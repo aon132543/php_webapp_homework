@@ -46,15 +46,15 @@ echo '<br> จำนวนสินค้าทั้งหมด '.$numrow."Rec
 
 echo "<nav aria-label='Page navigation example'> <ul class='pagination'>";
 echo " <li class='page-item'>";
-echo " <a class='page-link' href='show_product.php?page=".(($start_page/10)-1)."'>Previous</a> </li>";
+echo " <a class='page-link' href='index.php?page=".(($start_page/10)-1)."'>Previous</a> </li>";
 
 for($i=0; $i<ceil($numrow/$per_page); $i++)
 {
     
-    echo "<li class='page-item'> <a  class='page-link' href='show_product.php?page=$i'>".($i+1)."</a></li>";
+    echo "<li class='page-item'> <a  class='page-link' href='index.php?page=$i'>".($i+1)."</a></li>";
 
 }
-echo " <li class='page-item'> <a class='page-link' href='show_product.php?page=".(($start_page/10)+1)."'>Next</a> </li>";
+echo " <li class='page-item'> <a class='page-link' href='index.php?page=".(($start_page/10)+1)."'>Next</a> </li>";
 
 
 echo "</ul></nav>";
